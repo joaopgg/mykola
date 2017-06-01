@@ -153,6 +153,7 @@ module tomitribe_fab {
                 } else if (scope.fabTrigger === 'fabClick') {
                     scope.fabClick = false;
                 }
+                setInitialState(true);
                 $event.preventDefault();
             }
 
