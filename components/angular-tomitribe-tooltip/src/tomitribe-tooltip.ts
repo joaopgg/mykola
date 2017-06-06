@@ -96,12 +96,18 @@ module tomitribe_fab {
             }
 
             $timeout.cancel(timer1);
+            cancelShowTooltipTimers();
+        });
+
+        function cancelShowTooltipTimers() {
             $timeout.cancel(timer2);
             $timeout.cancel(timer3);
-        });
+        }
 
         function hideTooltip()
         {
+            cancelShowTooltipTimers();
+
             if (angular.isDefined(tooltip))
             {
                 tooltip.removeClass('tooltip-is-active');

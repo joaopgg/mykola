@@ -16,3 +16,8 @@ div
                     p
                         span Move the mouse over the following text (the tooltip text will change in 3s):
                         span(tribe-tooltip='{{message}}' style="margin-left: 30px") Hover me
+
+                    h4 Tooltip with 1 sec delay
+                    p
+                        span Move the mouse over the following text (the tooltip will appear in 1s):
+                        span(tribe-tooltip='This is a delayed tooltip', tribe-tooltip-show-delay="1000", style="margin-left: 30px") Hover me
